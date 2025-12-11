@@ -177,7 +177,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+        // overflow: hidden;
+        box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
         background: transparent;
         font-family: "Montserrat", "Open Sans", sans-serif;
         padding: 0;
@@ -193,7 +194,6 @@
         gap: 22px;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
         isolation: isolate;
     }
 
