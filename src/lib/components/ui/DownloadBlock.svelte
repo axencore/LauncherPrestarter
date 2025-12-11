@@ -62,7 +62,7 @@
 
     .stat {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 300;
         letter-spacing: 0.5px;
         color: $text-description;
         opacity: 0.9;
