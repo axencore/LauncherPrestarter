@@ -1,18 +1,17 @@
 @forward "colors";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 100 900;
     font-stretch: 100%;
     font-display: swap;
-    src: url('$lib/assets/fonts/OpenSans-VariableFont.ttf');
+    src: url("$lib/assets/fonts/OpenSans-VariableFont.ttf");
 }
 
 :root {
-    background-image: url('$lib/assets/images/bg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: transparent;
 }
 
 * {
@@ -21,14 +20,19 @@
     box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    font-family: "Open-Sans";
+    font-family: "Montserrat", "Open Sans", sans-serif;
+    color: $text-primary;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-html {
-    background: transparent !important;
+    background: transparent;
 }

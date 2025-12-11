@@ -2,11 +2,11 @@
 // Colors 
 //
 
-$base: #FFFFFF;
-$text-primary: #2C2C2C;
-$text-secondary: #D7D7D7;
-$text-description: #707070;
-$shadow: #D7D7D7EE;
-$active: linear-gradient(90deg, #7248A7 10.39%, #2C03A8 64.61%);
-$progressbar: linear-gradient(90deg, #8D4CE0 10.39%, #5711FA 93.28%);
+$base: rgba(64, 72, 89, 0.3);
+$text-primary: #ffffff;
+$text-secondary: rgba(255, 255, 255, 0.7);
+$text-description: #c4ac7c;
+$shadow: rgba(0, 0, 0, 0.4);
+$active: linear-gradient(120deg, #8d7b59 0%, #c4ac7c 100%);
+$progressbar: linear-gradient(90deg, #8d7b59 0%, #c4ac7c 100%);
 $error: #DB4D4D;

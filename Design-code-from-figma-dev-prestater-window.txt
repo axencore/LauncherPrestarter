@@ -1,0 +1,203 @@
+Код из Figma Dev для каждого блока дизайна:
+
+Prestarter window 2
+display: flex;
+width: 765px;
+height: 449px;
+padding: 20px 20px 30px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 22px;
+border-radius: 15px;
+
+background: url(<path-to-image>) lightgray -251.032px -169.245px / 182.253% 174.668% no-repeat, linear-gradient(108deg, #263721 0%, #1E1531 100%);
+
+Background-pattern-color
+width: 429.002px;
+height: 429px;
+aspect-ratio: 429.00/429.00;
+
+position: absolute;
+right: 167.998px;
+top: -5px;
+
+Pattern
+width: 607.353px;
+height: 607.871px;
+
+opacity: 0.4;
+
+Rectangle 10
+width: 483px;
+height: 483px;
+
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+header
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+gap: 10px;
+align-self: stretch;
+
+menu
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 11px;
+
+Mini-actions
+display: flex;
+width: 40px;
+height: 40px;
+padding: 8px;
+justify-content: center;
+align-items: center;
+aspect-ratio: 1/1;
+
+border-radius: 7px;
+border: 3px solid rgba(255, 255, 255, 0.10);
+background: rgba(53, 43, 24, 0.10);
+backdrop-filter: blur(7.5px);
+
+minus
+display: flex;
+width: 27px;
+height: 27px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+aspect-ratio: 1/1;
+
+Rectangle 1
+width: 26px;
+height: 26px;
+flex-shrink: 0;
+aspect-ratio: 1/1;
+
+border-radius: 32px;
+opacity: 0.8;
+background: rgba(141, 114, 63, 0.70);
+filter: blur(7.5px);
+
+Vector
+width: 17px;
+height: 0;
+
+position: absolute;
+left: 5px;
+bottom: 13px;
+
+stroke-width: 3px;
+stroke: #B89A61;
+
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="3" viewBox="0 0 20 3" fill="none"> <path d="M1.5 1.5H18.5" stroke="#B89A61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+Mini-actions
+display: flex;
+padding: 9px;
+align-items: center;
+gap: 10px;
+
+border-radius: 7px;
+border: 3px solid rgba(255, 255, 255, 0.10);
+background: rgba(53, 43, 24, 0.10);
+backdrop-filter: blur(7.5px);
+
+x
+width: 21px;
+height: 21px;
+aspect-ratio: 1/1;
+
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none"> <g opacity="0.8" filter="url(#filter0_f_177_1347)"> <rect x="15" y="15" width="25" height="25" rx="12.5" fill="#8D723F" fill-opacity="0.7"/> </g> <path d="M20.36 34.6396L34.64 20.3597" stroke="#B89A61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> <path d="M20.36 20.3597L34.64 34.6396" stroke="#B89A61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> <defs> <filter id="filter0_f_177_1347" x="0" y="0" width="55" height="55" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"> <feFlood flood-opacity="0" result="BackgroundImageFix"/> <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/> <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_177_1347"/> </filter> </defs> </svg>
+Rectangle 1
+width: 25px;
+height: 25px;
+aspect-ratio: 1/1;
+
+border-radius: 32px;
+opacity: 0.8;
+background: rgba(141, 114, 63, 0.70);
+filter: blur(7.5px);
+
+Group 21
+width: 14.28px;
+height: 14.28px;
+
+Vector
+width: 14.28px;
+height: 14.28px;
+aspect-ratio: 14.28/14.28;
+
+stroke-width: 3px;
+stroke: #B89A61;
+
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"> <path d="M1.49997 15.7798L15.78 1.49979" stroke="#B89A61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+Vector
+width: 14.28px;
+height: 14.28px;
+transform: rotate(-90deg);
+aspect-ratio: 14.28/14.28;
+
+stroke-width: 3px;
+stroke: #B89A61;
+
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"> <path d="M1.5 1.49979L15.78 15.7798" stroke="#B89A61" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+main
+display: flex;
+padding: 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+align-self: stretch;
+
+Логотип Существо Биг 1
+width: 178px;
+height: 178px;
+aspect-ratio: 1/1;
+
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+Loading-bar
+display: flex;
+padding: 0 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 17px;
+align-self: stretch;
+
+Скачивание openJFX 21
+color: #FFF;
+font-family: Montserrat;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2.72px;
+text-transform: uppercase;
+
+Background-bar
+display: flex;
+height: 22px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+
+border-radius: 80px;
+border: 3px solid #C4AC7C;
+background: rgba(64, 72, 89, 0.30);
+backdrop-filter: blur(4px);
+
+Progress-bar
+width: 371px;
+height: 22px;
+
+position: absolute;
+left: -20px;
+
+border-radius: 24px;
+background: linear-gradient(90deg, #8D7B59 0%, #C4AC7C 100%);

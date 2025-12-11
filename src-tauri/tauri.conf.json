@@ -13,8 +13,8 @@
     "windows": [
       {
         "title": "GravitLauncher Prestarter",
-        "width": 512,
-        "height": 300,
+        "width": 765,
+        "height": 449,
         "decorations": false,
         "shadow": false,
         "resizable": false,
