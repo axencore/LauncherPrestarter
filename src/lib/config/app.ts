@@ -1,5 +1,5 @@
 export const appConfig = {
-    name: "GravitLauncher Prestarter",
+    name: "EncoreCraft Java Downloader",
     version: "1.0.0",
     download: {
         speedSamples: 30,

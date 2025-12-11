@@ -16,7 +16,7 @@
     } from "$lib/types/events";
     import DownloadBlock from "$lib/components/ui/DownloadBlock.svelte";
 
-    const defaultStatus = "СКАЧИВАНИЕ OPENJFX 21";
+    const defaultStatus = "СКАЧИВАЕМ JAVA ДЛЯ ИГРЫ";
 
     let lastSpeedUpdate = 0;
     let error = "";
@@ -41,8 +41,10 @@
             downloadTracker.reset();
             speedMb = "";
 
-            await invoke<string>(tauriCommands.startDownload);
+            const result = await invoke<string>(tauriCommands.startDownload);
+            console.log("Результат запуска:", result || "успешно");
         } catch (err) {
+            console.error("Ошибка инициализации загрузки:", err);
             error = String(err);
             speedMb = "ERR";
         }
@@ -113,7 +115,7 @@
 </script>
 
 <svelte:head>
-    <title>GravitLauncher Prestarter</title>
+    <title>EncoreCraft Java Downloader</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
 

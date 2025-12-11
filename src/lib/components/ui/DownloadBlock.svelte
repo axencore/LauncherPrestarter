@@ -5,7 +5,7 @@
     export let speedMb: string | number;
     export let percentage: number;
     export let totalLabel = "";
-    export let statusLabel = "СКАЧИВАНИЕ OPENJFX 21";
+    export let statusLabel = "СКАЧИВАЕМ JAVA ДЛЯ ИГРЫ";
     export let showMeta = false;
 
     $: speedLabel =
@@ -41,7 +41,7 @@
     }
 
     p {
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 600;
         letter-spacing: 2.7px;
         text-transform: uppercase;
