@@ -66,6 +66,24 @@ export class DownloadTracker {
     formatTotalLabel(totalBytes: number): string {
         return (totalBytes / 1000 / 1000).toFixed(0) + " MB";
     }
+    formatCountLabel(current: number, total: number): string {
+        if (total <= 0) return "";
+
+        const isFileCount = Number.isInteger(total) && total < 10_000;
+        if (isFileCount) {
+            const safeCurrent = Math.min(Math.max(Math.round(current), 0), total);
+            return `${safeCurrent}/${total}`;
+        }
+
+        const toMb = (value: number) => Math.max(value, 0) / 1_000_000;
+        const currentMb = Math.min(toMb(current), toMb(total));
+        const totalMb = toMb(total);
+
+        const formatMb = (value: number) =>
+            value >= 10 ? Math.round(value).toString() : value.toFixed(1);
+
+        return `${formatMb(currentMb)}/${formatMb(totalMb)}`;
+    }
     percentageCalculation(currentProgress: number, totalBytes: number): number {
         return totalBytes > 0
             ? Math.min((currentProgress / totalBytes) * 100, 100)

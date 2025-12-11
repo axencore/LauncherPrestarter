@@ -23,6 +23,7 @@
     let speedMb: string = "";
     let percentage: number = 0;
     let totalLabel = "";
+    let filesLabel = "";
     let done = false;
     let running = false;
     let statusText = defaultStatus;
@@ -40,6 +41,7 @@
             running = false;
             downloadTracker.reset();
             speedMb = "";
+            filesLabel = "";
 
             const result = await invoke<string>(tauriCommands.startDownload);
             console.log("Результат запуска:", result || "успешно");
@@ -63,6 +65,7 @@
 
                     speedMb = result.speed;
                     percentage = result.percentage;
+                    filesLabel = downloadTracker.formatCountLabel(current, total);
 
                     if (now - lastSpeedUpdate > 200) {
                         totalLabel = downloadTracker.formatTotalLabel(total);
@@ -76,6 +79,10 @@
                 (event) => {
                     speedMb = "--";
                     percentage = downloadTracker.percentageCalculation(
+                        event.payload.processed,
+                        event.payload.total,
+                    );
+                    filesLabel = downloadTracker.formatCountLabel(
                         event.payload.processed,
                         event.payload.total,
                     );
@@ -154,6 +161,7 @@
                     {error}
                     {speedMb}
                     {percentage}
+                    {filesLabel}
                     totalLabel={totalLabel}
                     statusLabel={statusText}
                 />

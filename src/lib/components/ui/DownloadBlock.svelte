@@ -5,24 +5,36 @@
     export let speedMb: string | number;
     export let percentage: number;
     export let totalLabel = "";
-    export let statusLabel = "СКАЧИВАЕМ JAVA ДЛЯ ИГРЫ";
+    export let filesLabel = "";
+    export let statusLabel = "Downloading JAVA";
     export let showMeta = false;
 
     $: speedLabel =
-        speedMb && speedMb !== "ERR" && speedMb !== "--" && speedMb !== ""
-            ? `${speedMb} Mbps`
-            : "";
+        speedMb === "ERR"
+            ? "ERR"
+            : speedMb && speedMb !== "--" && speedMb !== ""
+              ? `${speedMb} Mbps`
+              : "";
+
+    const filesPlaceholder = "—";
+    $: placeholder = speedMb === "--" ? "Распаковка" : "—";
+    $: filesStat = filesLabel || filesPlaceholder;
+    $: speedStat = speedLabel || (error ? "" : placeholder);
 
     $: metaLabel =
         error || (!totalLabel && percentage === 0)
             ? ""
             : totalLabel
-              ? `${Math.min(Math.round(percentage), 100)}% · ${totalLabel}${speedLabel ? ` · ${speedLabel}` : ""}`
-              : `${Math.min(Math.round(percentage), 100)}%${speedLabel ? ` · ${speedLabel}` : ""}`;
+              ? `${Math.min(Math.round(percentage), 100)}% - ${totalLabel}${speedLabel ? ` - ${speedLabel}` : ""}`
+              : `${Math.min(Math.round(percentage), 100)}%${speedLabel ? ` - ${speedLabel}` : ""}`;
 </script>
 
 <div data-tauri-drag-region class="download-block">
-    <p class:errored={!!error} data-tauri-drag-region>{statusLabel}</p>
+    <div class="stats" data-tauri-drag-region>
+        <span class="stat files">{filesStat}</span>
+        <p class:errored={!!error}>{statusLabel}</p>
+        <span class="stat speed">{speedStat}</span>
+    </div>
     <ProgressBar class={error ? "errored" : ""} {percentage} />
     {#if showMeta && metaLabel}
         <small data-tauri-drag-region>{metaLabel}</small>
@@ -38,6 +50,30 @@
         gap: 12px;
         text-align: center;
         width: 100%;
+    }
+
+    .stats {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .stat {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: $text-description;
+        opacity: 0.9;
+    }
+
+    .stat.files {
+        text-align: left;
+    }
+
+    .stat.speed {
+        text-align: right;
     }
 
     p {
